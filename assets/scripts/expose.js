@@ -3,9 +3,8 @@
 window.addEventListener('DOMContentLoaded', init);
 
 function init() { 
-}
-
-const selectHorn = document.querySelector('#horn-select'); 
+  const selectHorn = document.querySelector('#horn-select'); 
+  const jsConfetti = new JSConfetti();
 
 var currHorn; //the horn currently selected
 
@@ -46,9 +45,11 @@ const playSound = document.querySelector('button');
 playSound.addEventListener('click', (event) => {
   document.querySelector('.hidden').play();
   if (currHorn=="party-horn"){
-    const jsConfetti = new JSConfetti();
     jsConfetti.addConfetti();
   }
 });
+}
+
+
 
 
